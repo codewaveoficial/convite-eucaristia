@@ -64,7 +64,6 @@ body::before {
   width: min(95%, 760px);
   min-height: 520px;
   margin: auto;
-  padding: 3rem 2rem;
   z-index: 1;
 }
 
@@ -84,8 +83,8 @@ body::before {
 }
 
 .hero-image {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
@@ -94,44 +93,9 @@ body::before {
   animation: float 3s ease-in-out infinite;
 }
 
-.frame-flower {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 3;
-}
-
-.frame-flower-top-left {
-  top: -32px;
-  left: -5px;
-  background-image: url('superior esquerda.png');
-  transform: rotate(15deg);
-}
-
-.frame-flower-top-right {
-  top: -32px;
-  right: -5px;
-  background-image: url('superior direita.png');
-}
-
-.frame-flower-bottom-left {
-  bottom: -20px;
-  left: -10px;
-  background-image: url('inferior esquerda.png');
-}
-
-.frame-flower-bottom-right {
-  bottom: -20px;
-  right: -10px;
-  background-image: url('inferior direita.png');
-}
-
 .name {
   font-family: 'Sacramento', 'Hachi Maru Pop', 'Cormorant Garamond', 'La Luxes Serif', 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: 700;
   text-shadow: 0 1.5px 3px rgba(0, 0, 0, 0.1);
   letter-spacing: 1.2px;
@@ -152,7 +116,7 @@ body::before {
 }
 
 .invitation-text {
-  font-size: 0.92rem;
+  font-size: 1.2rem;
   margin: 0;
   opacity: 0.95;
   font-weight: 300;
@@ -166,7 +130,7 @@ body::before {
 .event-title,
 .name {
   font-weight: 500;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 .event-title {

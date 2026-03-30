@@ -6,6 +6,8 @@
   <title>Bem-vindo</title>
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
     * {
       margin: 0;
       padding: 0;
@@ -25,10 +27,12 @@
 
     .container {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       z-index: 1;
       padding: 20px;
+      text-align: center;
     }
 
     .dove-link {
@@ -40,8 +44,8 @@
     }
 
     .dove {
-      width: 200px;
-      height: 200px;
+      width: 300px;
+      height: 300px;
       object-fit: contain;
       object-position: center;
       opacity: 0;
@@ -110,8 +114,8 @@
       }
 
       .dove {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
       }
 
       .container {
@@ -131,6 +135,9 @@
     <a href="convite.html" class="dove-link">
       <img src="pomba.png" alt="Pomba branca - Clique para ver o convite" class="dove">
     </a>
+    <div style="text-align:center; margin-top: 14px; font-size: 2.5rem; color: #fff; text-shadow: 0 1px 10px rgba(0,0,0,0.5); font-family: 'Sacramento', cursive;">
+      <p>Toque na pomba para abrir o convite.</p>
+    </div>
   </div>
 
 </body>
