@@ -141,7 +141,7 @@ body::before {
 
 .rsvp-buttons {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
@@ -154,19 +154,19 @@ body::before {
 @media (max-width: 768px) {
   .rsvp-buttons {
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 1rem;
   }
 
   .rsvp-btn {
     font-size: 0.75rem;
-    padding: 0.4rem 0.8rem;
+    padding: 1rem;
     min-width: 100px;
     max-width: 160px;
   }
 }
 
 .rsvp-btn {
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   font-size: 0.8rem;
   min-width: 120px;
   max-width: 180px;
@@ -336,12 +336,13 @@ body::before {
   }
 
   .rsvp-buttons {
-    gap: 0.4rem;
+    gap: 1rem;
   }
 
   .rsvp-btn {
-    font-size: 0.7rem;
-    padding: 0.35rem 0.6rem;
+    font-weight: 500;
+    font-size: 0.65rem;
+    padding: 1rem;
     min-width: 90px;
     max-width: 140px;
   }
