@@ -14,6 +14,12 @@ function confirmAttendance() {
     confirmBtn.disabled = true;
     confirmBtn.classList.add('btn-confirmed');
     alert('Obrigado! Sua presença foi confirmada.');
+
+    // Enviar mensagem para WhatsApp
+    const phoneNumber = '27999190332';
+    const message = encodeURIComponent('Olá! Confirmo minha presença na Primeira Eucaristia da Agatha.');
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappUrl, '_blank');
   }
 }
 
@@ -27,7 +33,7 @@ function updateConfirmedState() {
 
 const locationBtn = document.getElementById('locationBtn');
 const locationModal = document.getElementById('locationModal');
-const modalCloseBtn = document.querySelector('.modal-close');
+const modalCloseBtns = document.querySelectorAll('.modal-close');
 
 if (confirmBtn) {
   confirmBtn.addEventListener('click', confirmAttendance);
@@ -42,14 +48,24 @@ if (locationBtn) {
   });
 }
 
-if (modalCloseBtn) {
-  modalCloseBtn.addEventListener('click', () => {
-    if (locationModal) {
-      locationModal.classList.remove('open');
-      locationModal.setAttribute('aria-hidden', 'true');
+if (lunchBtn) {
+  lunchBtn.addEventListener('click', () => {
+    if (lunchModal) {
+      lunchModal.classList.add('open');
+      lunchModal.setAttribute('aria-hidden', 'false');
     }
   });
 }
+
+modalCloseBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const modal = btn.closest('.modal');
+    if (modal) {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+  });
+});
 
 if (locationModal) {
   locationModal.addEventListener('click', (event) => {
@@ -60,11 +76,27 @@ if (locationModal) {
   });
 }
 
+if (lunchModal) {
+  lunchModal.addEventListener('click', (event) => {
+    if (event.target === lunchModal) {
+      lunchModal.classList.remove('open');
+      lunchModal.setAttribute('aria-hidden', 'true');
+    }
+  });
+}
+
 window.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && locationModal && locationModal.classList.contains('open')) {
-    locationModal.classList.remove('open');
-    locationModal.setAttribute('aria-hidden', 'true');
+  if (event.key === 'Escape') {
+    if (locationModal && locationModal.classList.contains('open')) {
+      locationModal.classList.remove('open');
+      locationModal.setAttribute('aria-hidden', 'true');
+    }
+    if (lunchModal && lunchModal.classList.contains('open')) {
+      lunchModal.classList.remove('open');
+      lunchModal.setAttribute('aria-hidden', 'true');
+    }
   }
 });
+
 
 updateConfirmedState();

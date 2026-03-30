@@ -6,53 +6,35 @@
   <title>Primeira Eucaristia - Agatha</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="floral-top"></div>
-  <div class="floral-bottom"></div>
-  <div class="floral-left"></div>
-  <div class="floral-right"></div>
-
   <div class="screen">
+    <div class="moldura-externa"></div>
     <div class="invitation-card">
-      <div class="hero-section">
-        <img class="hero-image" src="hero.png" alt="Pomba da Primeira Eucaristia">
-        <h1 class="name">Agatha</h1>
-        <p class="invitation-text">Carinhosamente convida para sua</p>
-        <h2 class="event-title">Primeira Eucaristia</h2>
-      </div>
+      <section class="invitation-section">
+      
+          <img class="hero-image" src="hero.png" alt="Pomba da Primeira Eucaristia">
+          <h1 class="name">AGATHA</h1>
+          <p class="invitation-text">Carinhosamente convida para sua</p>
+          <h2 class="event-title">Primeira Eucaristia</h2>
 
-      <div class="details-section">
-        <div class="detail-item">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z" fill="#8f58b4"/>
-          </svg>
-          <div>
-            <strong>Data e Hora:</strong><br>
-            19 de abril de 2026 às 8h
+          <div class="detail-item">
+            <div>
+              19 de abril de 2026 às 8h
+            </div>
           </div>
-        </div>
-        </div>
 
-        <div class="detail-item">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z" fill="#8f58b4"/>
-          </svg>
-          <div>
-            <strong>Após a cerimônia:</strong><br>
-            Brunch para amigos e familiares
+         <div class="rsvp-buttons">
+            <button id="confirmBtn" class="rsvp-btn">Confirmar Presença</button>
+            <button id="locationBtn" class="rsvp-btn location-btn">Localização</button>
+            <button id="lunchBtn" class="rsvp-btn">Almoço Compartilhado</button>
           </div>
-        </div>
-      </div>
+          <p class="rsvp-note">Sua confirmação nos ajudará a organizar melhor o evento</p>
 
-      <div class="rsvp-section">
-        <div class="rsvp-buttons">
-          <button id="confirmBtn" class="rsvp-btn">Confirmar Presença</button>
-          <button id="locationBtn" class="rsvp-btn location-btn">Localização</button>
-        </div>
-        <p class="rsvp-note">Sua confirmação nos ajudará a organizar melhor o evento</p>
-      </div>
+      </section>
     </div>
   </div>
 
@@ -60,11 +42,22 @@
     <div class="modal-content">
       <button class="modal-close" aria-label="Fechar">×</button>
       <h3 id="locationModalTitle">Local da Cerimônia</h3>
-      <p>Paróquia Nossa Senhora da Saúde</p>
-      <a href="https://www.google.com/maps/place/Par%C3%B3quia+Nossa+Senhora+da+Sa%C3%BAde" target="_blank" rel="noopener noreferrer" class="location-link">Abrir no Google Maps</a>
+      <p>Paróquia Nossa Senhora da Saúde - Morada de Laranjeiras</p>
+      <a href="https://maps.app.goo.gl/ceHAZtN8Zt1dSbARA" target="_blank" rel="noopener noreferrer" class="location-link">Abrir no Google Maps</a>
+    </div>
+  </div>
+
+  <div id="lunchModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="lunchModalTitle">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Fechar">×</button>
+      <h3 id="lunchModalTitle">Almoço Compartilhado</h3>
+      <p>Após a cerimônia, teremos um brunch para amigos e familiares.</p>
+      <p>Pedimos, com carinho, que quem puder traga um doce para compartilharmos como sobremesa.</p>
+      <p>E, se tocar no seu coração, uma lembrancinha para nossa mocinha será muito bem-vinda, como forma de carinho por toda sua dedicação nessa caminhada de fé.</p>
     </div>
   </div>
 
   <script src="script.js"></script>
+
 </body>
 </html>
